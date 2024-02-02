@@ -27,11 +27,12 @@ while True:
     
     print("Checking Rate...")
     if last_rate != rate:
-        print("Found Differance, Sending Discord")
+        print("Found Difference, Sending Discord")
         alert_discord(rate)
     else:
-        print("No Differance Found")
+        print("No Difference Found")
 
     last_rate = rate
+    
     print("Waiting 15 mins...")
     time.sleep(900)
