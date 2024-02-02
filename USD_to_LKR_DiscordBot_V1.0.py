@@ -33,6 +33,5 @@ while True:
         print("No Differance Found")
 
     last_rate = rate
-
     print("Waiting 15 mins...")
     time.sleep(900)
