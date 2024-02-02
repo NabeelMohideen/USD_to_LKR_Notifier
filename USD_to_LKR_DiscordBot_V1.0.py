@@ -19,13 +19,20 @@ def alert_discord(rate):
     discord_webhook.execute()
 
 while True:
+    print("Fetching Rate...")
     response = requests.get(url, headers=headers)
     html_content = response.content
     soup = BeautifulSoup(html_content, 'html.parser')
     rate = soup.find('div', class_='YMlKec fxKbKc').text
     
-    if last_rate is not None and last_rate != rate:
+    print("Checking Rate...")
+    if last_rate != rate:
+        print("Found Differance, Sending Discord")
         alert_discord(rate)
+    else:
+        print("No Differance Found")
 
     last_rate = rate
+
+    print("Waiting 15 mins...")
     time.sleep(900)
