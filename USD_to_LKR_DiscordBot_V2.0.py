@@ -26,6 +26,7 @@ def alert_discord(rate):
     discord_webhook.execute()
 
 while True:
+    print("Fetching Rate...")
     response = requests.get(url, headers=headers)
     html_content = response.content
     soup = BeautifulSoup(html_content, 'html.parser')
@@ -33,10 +34,16 @@ while True:
     
     last_rate = read_usd_rate()
 
+    print("Checking Rate...")
     if last_rate != rate:
+        print("Found Difference, Sending Discord...")
         alert_discord(rate)
+        print("Saving current rate...")
         save_usd_rate(rate)
+    else:
+        print("No Difference Found")
 
+    print("Waiting 15 mins...")
     time.sleep(900)
 
 
