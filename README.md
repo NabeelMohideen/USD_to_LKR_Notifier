@@ -1,7 +1,7 @@
 # USD_to_LKR_DiscordBot
 
 ## USD_to_LKR_DiscordBot_V1.0
-This script fetches the latest USD to LKR currency rate and sends it to Discord via a webhook. It saves the rate and triggers an alert with the current date and time only when a change is detected.
+This script fetches the latest USD to LKR currency rate and sends it to Discord via a webhook. It saves the rate into a variable. It checks for rate changes every 15 minutes and, if detected, triggers an alert with the current date and time.
 
 ```sh
 $ python USD_to_LKR_DiscordBot_V1.0.py
