@@ -14,7 +14,7 @@ current_time = datetime.now().strftime("%H:%M:%S")
 last_rate = 0
 
 def alert_discord(rate):
-    message = f"@everyone\n **USD to LKR Bot Notify Every Change v1.0**\n Date: {current_date}\n Time: {current_time}\n USD to LKR Rate: **{{:.2f}}".format(float(rate)) + "**\n"
+    message = f"@everyone\n **USD to LKR Bot Notify Every Change v1.0**\n Date: {current_date}\n Time: {current_time}\n USD to LKR Rate: **{{:.0f}}".format(float(rate)) + "**\n"
     discord_webhook = DiscordWebhook(url=webhook_url, content=message)
     discord_webhook.execute()
 
