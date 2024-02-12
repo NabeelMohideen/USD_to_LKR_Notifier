@@ -20,7 +20,7 @@ def read_usd_rate():
         return file.read()
 
 def alert_discord(rate):
-    rounded_rate = "{:.2f}".format(float(rate))
+    rounded_rate = "{:.0f}".format(float(rate))
     message = f"@everyone\n **USD to LKR Bot Notify Every Change v2.0**\n Date: {current_date}\n Time: {current_time}\n USD to LKR Rate: **{rounded_rate}**\n"
     discord_webhook = DiscordWebhook(url=webhook_url, content=message)
     discord_webhook.execute()
