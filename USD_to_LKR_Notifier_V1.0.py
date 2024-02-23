@@ -3,9 +3,13 @@ import requests
 from bs4 import BeautifulSoup
 from discord_webhook import DiscordWebhook
 from datetime import datetime
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 url = "https://www.google.com/finance/quote/USD-LKR?sa=X&ved=2ahUKEwj__Y_x166AAxUhSWwGHYgYAEUQmY0JegQIBhAr"
-webhook_url = "webhook_url"
+webhook_url = os.environ['WEB_HOOK']
 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"}
 
 current_date = datetime.now().strftime("%d.%m.%y")
