@@ -3,7 +3,7 @@
 1. Clone Repository
 
 ```sh
-$ git clone https://github.com/nabzter/USD_to_LKR_DiscordBot.git
+$ git clone https://github.com/nabzter/USD_to_LKR_Notifier.git
 ```
 
 2. Move into the directory
