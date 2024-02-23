@@ -1,4 +1,4 @@
-# USD_to_LKR_DiscordBot
+# USD_to_LKR_Notifier
 
 1. Clone Repository
 
@@ -19,12 +19,12 @@ $ pip install -r requirements.txt
 
 4. Add your discord webhook URL to `webhook_url` variable.
 
-## USD_to_LKR_DiscordBot_V1.0
+## USD_to_LKR_Notifier_V1.0
 This script fetches the latest USD to LKR currency rate and sends it to Discord via a webhook. It saves the rate into a variable. It checks for rate changes every 15 minutes and, if detected, triggers an alert with the current date and time.
 
-Run `USD_to_LKR_DiscordBot_V1.0` Script
+Run `USD_to_LKR_Notifier_V1.0` Script
 ```sh
-$ python USD_to_LKR_DiscordBot_V1.0.py
+$ python USD_to_LKR_Notifier_V1.0.py
 ```
 
 Discord Alert Structure
@@ -36,10 +36,10 @@ Time: 13:34:36
 USD to LKR Rate: 321.71
 ```
 
-## USD_to_LKR_DiscordBot_V2.0
+## USD_to_LKR_Notifier_V2.0
 This script fetches the latest USD to LKR currency rate and sends it to Discord via a webhook. It checks for rate changes every 15 minutes and, if detected, triggers an alert with the current date and time. The script updates the last_rate.txt file with the latest currency rate.
 
-Run `USD_to_LKR_DiscordBot_V1.0` Script
+Run `USD_to_LKR_DiscordBot_V2.0` Script
 ```sh
 $ python USD_to_LKR_DiscordBot_V2.0.py
 ```
